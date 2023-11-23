@@ -7,7 +7,8 @@ function Calculadora() {
   const [peso, setPeso] =  useState (0);
 
   const calcularImc = () =>{
-    const calcImc =  peso / (altura * altura);
+    const alturaCm = altura / 100
+    const calcImc =  peso / (alturaCm * alturaCm) ;
     return calcImc.toFixed(2);
   }
 
