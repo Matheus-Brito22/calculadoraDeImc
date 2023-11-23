@@ -15,20 +15,19 @@ function Calculadora() {
   const classificarImc = () =>{
     const  resultado = calcularImc()
     
-   if(resultado <= 18.5){
-    return "Você está abaixo do peso"
-   }
-   else if(resultado > 18.5 && resultado <= 24.99){
-    return "Você está com peso ideal"
-   }
-   else if(resultado > 24.99 && resultado <= 29.99){
-    return "Você está sobre peso"
-   }
-   else{
-    return "Você esta obeso"
-   }
-      
-  }
+    if(resultado <= 18.5){
+      return "Você está abaixo do peso"
+    }
+    else if(resultado > 18.5 && resultado <= 24.99){
+      return "Você está com peso ideal"
+    }
+    else if(resultado > 24.99 && resultado <= 29.99){
+      return "Você está sobre peso"
+    }
+    else{
+      return "Você esta obeso"
+    }
+ }
   
     return(
       <div className={styles.container}>
@@ -37,7 +36,7 @@ function Calculadora() {
       <h1 className={styles.title}>Calcule seu IMC</h1>
       <input type="number" placeholder='Insira seu peso' required  className={styles.in} onChange={({target}) => setPeso(Number(target.value))}/>
 
-      <input type="number" placeholder='Insira sua altura' required  className={styles.in} onChange={({target}) => setAltura(Number(target.value))} />
+      <input type="number" placeholder='Insira sua altura em centimetros' required  className={styles.in} onChange={({target}) => setAltura(Number(target.value))} />
 
       <p className={styles.text}>Seu peso é: <b>{calcularImc()}</b></p>
       <p className={styles.text}>{classificarImc()}</p>

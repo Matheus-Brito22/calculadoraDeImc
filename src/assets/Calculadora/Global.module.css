@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: rgb(208, 233, 233);
+    background-color: #d0e9e9;
 }
 
 .container{
@@ -15,14 +15,11 @@ body{
     justify-content: center;
 }
 
-
 .in{
     display: block;
-    width: 200px;
+    width: 260px;
     padding: 8px;
     margin-bottom: 5px;
-    
-
 }
 
 .title{
